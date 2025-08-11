@@ -19,11 +19,11 @@ A **Workout API** é uma aplicação assíncrona voltada para academias especial
    git clone https://github.com/seu-usuario/workout_api.git
    cd workout_api
    ```
- como rodar a Workoutapi com o comando uvicorn
- 
+ 2.execultar com Uvicorn (modo desenvolvimento)
+
  uvicorn workoutapi.main:app --reload
  
-2.Suba os containers com Docker:
+3.Suba os containers com Docker:
 
 docker-compose up 
 
