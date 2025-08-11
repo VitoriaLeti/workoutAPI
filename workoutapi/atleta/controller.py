@@ -95,7 +95,7 @@ async def query(id: UUID, db_session: DatabaseDependency) -> AtletaOut:
 
 
 
-from uuid import UUID
+
 
 @router.patch(
     "/{id}",
