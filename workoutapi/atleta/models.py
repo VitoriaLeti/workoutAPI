@@ -17,9 +17,9 @@ class AtletaModel(BaseModel):
     created_at: Mapped[datetime] = mapped_column(DateTime, nullable=False)
 
     categoria_id: Mapped[int] = mapped_column(ForeignKey('categorias.pk_id'))
-    categoria: Mapped['CategoriaModel'] = relationship(back_populates='atletas')  # type: ignore
+    categoria: Mapped['CategoriaModel'] = relationship(back_populates='atletas',lazy="selectin")  # type: ignore
     centro_treinamento_id: Mapped[int] = mapped_column(ForeignKey('centro_treinamento.pk_id'))
-    centro_treinamento: Mapped['CentroTreinamentoModel'] = relationship("CentroTreinamentoModel", back_populates="atletas")  # singular
+    centro_treinamento: Mapped['CentroDetreinamentoModel'] = relationship("CentroDetreinamentoModel", back_populates="atletas", lazy="selectin")
 
 
 

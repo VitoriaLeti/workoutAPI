@@ -1,4 +1,5 @@
 #from atleta.models import AtletaModel
+from typing import List
 from atleta.models import AtletaModel
 from sqlalchemy import  Integer, String
 from sqlalchemy.orm import Mapped, mapped_column,relationship
@@ -12,5 +13,6 @@ class CentroDetreinamentoModel(BaseModel):
     nome: Mapped[str] = mapped_column(String(50),unique=True, nullable=False)
     endereco: Mapped[str] = mapped_column(String(60), nullable=False)
     proprietario: Mapped[str] = mapped_column(String(30), nullable=False)
-    atleta: Mapped['AtletaModel'] = relationship("AtletaModel", back_populates="centros_treinamento")
+    atletas: Mapped[List['AtletaModel']] = relationship("AtletaModel", back_populates="centro_treinamento", lazy="selectin")
+
 
