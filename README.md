@@ -23,7 +23,7 @@ A **Workout API** é uma aplicação assíncrona voltada para academias especial
 
  uvicorn workoutapi.main:app --reload
  
-3.Suba os containers com Docker:
+🐳3.Suba os containers com Docker:
 
 docker-compose up 
 
