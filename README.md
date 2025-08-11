@@ -19,7 +19,7 @@ A **Workout API** é uma aplicação assíncrona voltada para academias especial
    git clone https://github.com/seu-usuario/workout_api.git
    cd workout_api
    ```
- 2.execultar com Uvicorn (modo desenvolvimento)
+🦄 2.execultar com Uvicorn (modo desenvolvimento)
 
  uvicorn workoutapi.main:app --reload
  
