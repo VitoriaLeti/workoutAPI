@@ -151,3 +151,4 @@ async def delete_atleta(id: UUID, db_session: DatabaseDependency) -> None:
     await db_session.delete(atleta)
     await db_session.commit()
 
+
